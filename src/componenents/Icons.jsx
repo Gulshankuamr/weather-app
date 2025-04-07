@@ -5,12 +5,43 @@ import visibilityIcon from '../assets/visibility.png';
 import sunriseIcon from '../assets/sunrise.png';
 import sunsetIcon from '../assets/sunset.png';
 
-const Icon = ({src, alt, className}) => (
-    <img src={src} alt={alt} className={`h-8 w-8 inline-block ${className}`} />
-)
+// Reusable Icon Component
+const Icon = ({ src, alt, className = '' }) => (
+  <img src={src} alt={alt} className={`h-8 w-8 inline-block ${className}`} />
+);
 
-export const WindIcon= () => <Icon src={windIcon} alt="wind" className='animate-icon svg-hover'/>
-export const HumidityIcon= () => <Icon src={humidityIcon} alt="humidity" className='powerful-pulse svg-hover'/>
-export const VisibilityIcon= () => <Icon src={visibilityIcon} alt="visibility" className='powerful-pulse svg-hover'/>
-export const SunriseIcon= () => <Icon src={sunriseIcon} alt="sunrise" className='powerful-pulse svg-hover'/>
-export const SunsetIcon= () => <Icon src={sunsetIcon} alt="sunset" className='powerful-pulse svg-hover'/>
+// Common icon styles
+const icons = {
+  WindIcon: {
+    src: windIcon,
+    alt: 'wind',
+    className: 'animate-icon svg-hover'
+  },
+  HumidityIcon: {
+    src: humidityIcon,
+    alt: 'humidity',
+    className: 'powerful-pulse svg-hover'
+  },
+  VisibilityIcon: {
+    src: visibilityIcon,
+    alt: 'visibility',
+    className: 'powerful-pulse svg-hover'
+  },
+  SunriseIcon: {
+    src: sunriseIcon,
+    alt: 'sunrise',
+    className: 'powerful-pulse svg-hover'
+  },
+  SunsetIcon: {
+    src: sunsetIcon,
+    alt: 'sunset',
+    className: 'powerful-pulse svg-hover'
+  }
+};
+
+// Export icons
+export const WindIcon = () => <Icon {...icons.WindIcon} />;
+export const HumidityIcon = () => <Icon {...icons.HumidityIcon} />;
+export const VisibilityIcon = () => <Icon {...icons.VisibilityIcon} />;
+export const SunriseIcon = () => <Icon {...icons.SunriseIcon} />;
+export const SunsetIcon = () => <Icon {...icons.SunsetIcon} />;
