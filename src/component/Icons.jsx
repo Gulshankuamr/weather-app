@@ -10,7 +10,7 @@ const Icon = ({ src, alt, className = '' }) => (
   <img src={src} alt={alt} className={`h-8 w-8 inline-block ${className}`} />
 );
 
-// Common icon styles
+// Icon definitions
 const icons = {
   WindIcon: {
     src: windIcon,
@@ -39,7 +39,7 @@ const icons = {
   }
 };
 
-// Export icons
+// Export individual icons
 export const WindIcon = () => <Icon {...icons.WindIcon} />;
 export const HumidityIcon = () => <Icon {...icons.HumidityIcon} />;
 export const VisibilityIcon = () => <Icon {...icons.VisibilityIcon} />;

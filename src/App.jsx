@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import WeatherBackground from "./componenents/weatherBackground";
-import { convertTemperature, getHumidityValue, getVisibilityValue } from "./componenents/Helper";
-import { HumidityIcon, SunsetIcon, VisibilityIcon, WindIcon, SunriseIcon } from "./componenents/Icons";
+import WeatherBackground from "./component/weatherBackground";
+import { convertTemperature, getHumidityValue, getVisibilityValue } from "./component/Helper";
+import { HumidityIcon, SunsetIcon, VisibilityIcon, WindIcon, SunriseIcon } from "./component/Icons";
 
 // Define getWindDirection function
 const getWindDirection = (degree) => {
